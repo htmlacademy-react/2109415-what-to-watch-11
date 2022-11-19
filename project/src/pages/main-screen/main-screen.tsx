@@ -14,8 +14,14 @@ type MainScreenProps = {
 
 function MainScreen( {filmTop, films}:MainScreenProps) :JSX.Element {
   const newGenre = useAppSelector((state) => state.genre);
+<<<<<<< HEAD
   const filteredFilms = filterFilms(films, newGenre);
 
+=======
+  let filteredFilms = films;
+  if (newGenre !== FILMGENREBYDEFAULT) {
+    filteredFilms = films.filter((film)=>film.genre.includes(newGenre));}
+>>>>>>> 038b8ee (7.14 done and ready)
 
   return (
     <>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios';
 import {StatusCodes} from 'http-status-codes';
 import {processErrorHandle} from './process-error-handle';
@@ -12,6 +13,9 @@ const StatusCodeMapping: Record<number, boolean> = {
 
 const shouldDisplayError = (response: AxiosResponse) => !!StatusCodeMapping[response.status];
 
+=======
+import axios, {AxiosInstance} from 'axios';
+>>>>>>> 038b8ee (7.14 done and ready)
 
 const BACKEND_URL = 'https://11.react.pages.academy/wtw';
 const REQUEST_TIMEOUT = 5000;
@@ -22,6 +26,7 @@ export const createAPI = (): AxiosInstance => {
     timeout: REQUEST_TIMEOUT,
   });
 
+<<<<<<< HEAD
   api.interceptors.request.use(
     (config: AxiosRequestConfig) => {
       const token = getToken();
@@ -45,5 +50,7 @@ export const createAPI = (): AxiosInstance => {
       throw error;
     }
   );
+=======
+>>>>>>> 038b8ee (7.14 done and ready)
   return api;
 };
