@@ -30,4 +30,10 @@ export enum FilmGenre {
   Drama = 'Drama',
 }
 
+export enum FilmInfoTab {
+  Overview = 'OVERVIEW',
+  Details = 'DETAILS',
+  Reviews = 'REVIEWS',
+}
+
 export const FILMGENREBYDEFAULT = 'All genres';
