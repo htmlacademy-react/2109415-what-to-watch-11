@@ -8,7 +8,6 @@ import NotFoundPage from '../not-found-page/not-found-page';
 import LoadingScreen from '../loading-screen/loading-screen';
 import { AppRoute } from '../../const';
 
-
 function PlayerScreen():JSX.Element{
   const params = useParams();
   const filmId = params.id;
@@ -48,15 +47,13 @@ function PlayerScreen():JSX.Element{
   const onPlayClickHandle = () => {
     setIsPlaying(!isPlaying);
   };
-  const onFullScreenClickHandle = () => {
-    // console.log('click');
-  };
+  const onFullScreenClickHandle = () => void 0;
 
   const onExitClickHandle = () => {
     navigate(AppRoute.Main);
   };
   if(!filmId) { return <NotFoundPage/>;}
-  const film = films[(+filmId) - 1];
+  const film = films[Number(filmId) - 1];
   const {videoLink, name, posterImage} = film;
   if(isLoading) {
     <LoadingScreen/>;
